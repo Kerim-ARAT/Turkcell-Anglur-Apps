@@ -1,13 +1,13 @@
 import { Component, ElementRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PipeComponent } from "./pipes/pipe/pipe.component";
+
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [PipeComponent],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   
@@ -16,8 +16,10 @@ import { PipeComponent } from "./pipes/pipe/pipe.component";
 
 
 
-
 export class AppComponent {
+  save(input:string){
+    console.log(input);
+  }
   title = 'angularapp'; 
 }
 
