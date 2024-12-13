@@ -1,0 +1,54 @@
+<button class="btn btn-primary" (click)="gizle()">Aç kapa</button>
+<div *ngIf="goster">
+<h1>ng-swich works!</h1>
+<div class="p-1">
+<Button class="btn btn-info" (click)="kucukSohow()" >küçük</Button>
+<button class="btn btn-danger" (click)="buyukSohow()">Büyük</button>
+<button class="btn btn-success" (click)="ortaSohow()">orta</button>
+<button class="btn btn-primary" (click)="gizle()">Gizle</button>
+</div>
+<div class="bg-primary" [ngSwitch]="product.type">
+    <main class="bg-bod-secondary container">main
+        <div class=" row m-5" >  
+            
+            
+            
+                  
+        </div>
+       
+    </main>
+    <div *ngSwitchCase="1">big producte
+        <div class="col-lg card card border-black m-1" id="ca1">
+            <img class="card-img-top" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-card-40-iphone16hero-202409?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1723234230295" alt="">
+            <div class="card-body">
+                <h5 class="card-title">İphone 16</h5>
+                <p class="card-text">Hızlı ve etkili çözümler için</p>
+                <a href="https://www.apple.com/tr/iphone-16/" target="_blank" class="btn btn-primary">incele</a>
+
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="2">middle producte
+        <div class="card border-black col-lg m-1 "id="ca2"  >
+            <div>  
+                <img class="card-img-top" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-card-40-iphone15hero-202309?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1693086290559" alt="">
+            </div>
+            <div class="card-body">
+                <h5>İphone 15</h5>
+                <p class="card-text">Hızlı ve etkili çözümler için </p>
+                    <a href="https://www.apple.com/tr/shop/buy-iphone/iphone-15" class="btn btn-primary" target="_blank">İncele</a>
+            </div>
+    </div>
+    <div *ngSwitchCase="3">small producte
+    </div>
+    <div class="card border-black col-sm m-1" id="ca3">
+        <img class="card-img-top" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-card-40-iphone14-202209?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1693086290654" alt="">
+        <div class="card-body">
+        <h5 class="card-title">İphone 14</h5>
+        <p class="card-text">Hızlı ve etkili çözümler için</p>
+        <a href="https://www.apple.com/tr/shop/buy-iphone/iphone-14" target="_blank" class="btn btn-primary">İncele</a>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
