@@ -11,8 +11,11 @@ import { fromEvent } from 'rxjs';
 })
 export class TemplateDrivenComponent {
   loginMode:loginModel;
+  loginmodel2:loginModeC;
   constructor(){
-    this.loginMode= {userName:"İsim",passworld:"1234"}
+    this.loginMode= {userName:"",passworld:"",rememberME:false}
+    /* class ilee örnek */
+    this.loginmodel2=new loginModeC();
   }
   save(form:NgForm){
     console.log(form.value);
@@ -21,6 +24,20 @@ export class TemplateDrivenComponent {
 
 }
 interface loginModel{
-  userName:string;
+  userName:string
   passworld:string
+  rememberME:boolean
 }
+/* class ilee örnek */
+class loginModeC{
+  userName?:string
+  passworld?:string
+  rememberME?:boolean
+ /*  constructor(userName:string,pasword:string,rememberME:boolean){
+    this.userName=userName;
+    this.passworld=pasword;
+    this.rememberME=rememberME
+
+  } */
+}
+

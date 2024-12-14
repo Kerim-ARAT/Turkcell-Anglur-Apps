@@ -1,9 +1,15 @@
-<form #saveForm="ngForm" class="form-check-input" (ngSubmit)="save(saveForm)">
+<form #saveForm="ngForm" class="row container" (ngSubmit)="save(saveForm)">
 <label for="userName">Username</label>
-<input type="text" name="userName" [(ngModel)]="loginMode.userName" >
+<input type="text" name="userName2" [(ngModel)]="loginMode.userName" >
 <br>
 <label for="password">password: </label>
-<input type="password" name="password"  [(ngModel)]="loginMode.passworld">
+<input type="password" name="password2"  [(ngModel)]="loginMode.passworld">
+<br>
+<label for="rememberME2"> rememberME2:</label>
+<input type="checkbox" class="form-check-input" name="rememberME2" [ngModel]="loginMode.rememberME">
 <br>
 <button  type="submit" class="btn btn-info">Giriş</button>
+
 </form>
+
+
