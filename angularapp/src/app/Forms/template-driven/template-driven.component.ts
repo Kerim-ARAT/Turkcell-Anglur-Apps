@@ -13,6 +13,7 @@ import { fromEvent } from 'rxjs';
 export class TemplateDrivenComponent {
   
   loginMode:loginModel;
+  genderMenu:genderRadioMenu[]=[{text:"Erkek",value:1},{text:"kadın",value:2}]
   countryMenu:countryDropMenu[]=[{text:"seciniz",value:0},{text:"Turkiye",value:1},{text:"Almanya",value:2},{text:"Fransa",value:3}]
   /* loginmodel2:loginModeC; */
   constructor(){
@@ -22,12 +23,17 @@ export class TemplateDrivenComponent {
   }
   save(form:NgForm){
     console.log(form.value);
-    console.log(this.loginMode)                              
+    /* console.log(this.loginMode)  */                             
   }
 
 }
 
 interface countryDropMenu{
+  text:string
+  value:number
+}
+
+interface genderRadioMenu{
   text:string
   value:number
 }

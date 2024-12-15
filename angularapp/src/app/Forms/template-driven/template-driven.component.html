@@ -13,8 +13,11 @@
     <option *ngFor="let item of countryMenu" value="{{item.value}}">{{item.text}}</option>
 </select>
 <br>
-<input type="radio" name="gender" value="1" [ngModel]="loginMode.gender">Erkek
-<input type="radio" name="gender" value="2" [ngModel]="loginMode.gender">Kadın
+<div *ngFor="let item of genderMenu">
+    <input type="radio" name="gender" [value]="item.value" [ngModel]="loginMode.gender">{{item.text}}
+</div>
+<!-- <input type="radio" name="gender" [value]="1" [ngModel]="loginMode.gender">erkek
+<input type="radio" name="gender" value="2" [ngModel]="loginMode.gender">Kadın -->
 <br>
 <button  type="submit" class="btn btn-info">Giriş</button>
 
