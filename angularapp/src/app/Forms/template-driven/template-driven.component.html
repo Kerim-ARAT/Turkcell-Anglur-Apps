@@ -1,10 +1,46 @@
 <form #saveForm="ngForm" class="container" (ngSubmit)="save(saveForm)">
+
 <label for="userName">Username:</label>
-<input type="text" name="userName2" [(ngModel)]="loginMode.userName" >
+<input #userNameInput="ngModel" type="text" name="userName2" [(ngModel)]="loginMode.userName" >
+<div class="border border-success rounded-1 p-1">
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-primary"> Valid: {{userNameInput.invalid}}</li>
+        <li class="list-group-item list-group-item-success">invalid: {{userNameInput.invalid}}</li>
+        <li class="list-group-item list-group-item-secondary">errors:{{userNameInput.errors | json}}</li>
+        <li class="list-group-item list-group-item-info">dirty:{{userNameInput.dirty}}</li>
+        <li class="list-group-item list-group-item-light">pristine:{{userNameInput.pristine}}</li>
+        <li class="list-group-item list-group-item-danger">touched:{{userNameInput.touched}}</li>
+        <li class="list-group-item list-group-item-success">untouched:{{userNameInput.untouched}}</li>
+        <li class="list-group-item list-group-item-warning">value?: {{userNameInput.value}}</li>
+    </ul>
+</div>
+
+
+
+
+
 <br>
 <label for="password">password: </label>
-<input type="password" name="password2"  [(ngModel)]="loginMode.passworld">
+<input #passworld="ngModel" type="password" name="password2"  [(ngModel)]="loginMode.passworld">
 <br>
+<div class="p-1 border border-success rounded-1 ">
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-primary"> Valid: {{passworld.invalid}}</li>
+        <li class="list-group-item list-group-item-success">invalid: {{passworld.invalid}}</li>
+        <li class="list-group-item list-group-item-secondary">errors:{{passworld.errors | json}}</li>
+        <li class="list-group-item list-group-item-info">dirty:{{passworld.dirty}}</li>
+        <li class="list-group-item list-group-item-light">pristine:{{passworld.pristine}}</li>
+        <li class="list-group-item list-group-item-danger">touched:{{passworld.touched}}</li>
+        <li class="list-group-item list-group-item-success">untouched:{{passworld.untouched}}</li>
+        <li class="list-group-item list-group-item-warning">value?: {{passworld.value}}</li>
+    </ul>
+</div>
+
+
+
+
+
+
 <label for="rememberME2"> rememberme:</label>
 <input type="checkbox" class="form-check-input" name="rememberME2" [ngModel]="loginMode.rememberME">
 <br>
@@ -16,17 +52,18 @@
 <div *ngFor="let item of genderMenu">
     <input (ngModelChange)="gender($event)" type="radio" name="gender" [value]="item.value" [ngModel]="loginMode.gender">{{item.text}}
 </div>
+<!-- manuel  event Exempl -->
 <!-- <input type="radio" name="gender" [value]="1" [ngModel]="loginMode.gender">erkek
 <input type="radio" name="gender" value="2" [ngModel]="loginMode.gender">Kadın -->
 <br>
 <button  type="submit" class="btn btn-info">Giriş</button>
 
-
-<select #myselect (change)="selectManuel(myselect.value)" name="selectManuel" id="">
+<!-- chenge Event exemple -->
+<!-- <select #myselect (change)="selectManuel(myselect.value)" name="selectManuel" id="">
     <option value="1">Select 1</option>
     <option value="2">select 2</option>
     <option value="3">select 3</option>
-</select>
+</select> -->
 
 </form>
 

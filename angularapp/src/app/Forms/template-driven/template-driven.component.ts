@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { fromEvent } from 'rxjs';
@@ -6,7 +6,7 @@ import { fromEvent } from 'rxjs';
 @Component({
   selector: 'app-template-driven',
   standalone: true,
-  imports: [FormsModule,NgFor],
+  imports: [FormsModule,NgFor,CommonModule],
   templateUrl: './template-driven.component.html',
   styleUrl: './template-driven.component.css'
 })
