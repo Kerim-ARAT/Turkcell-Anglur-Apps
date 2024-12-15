@@ -25,6 +25,17 @@ export class TemplateDrivenComponent {
     console.log(form.value);
     /* console.log(this.loginMode)  */                             
   }
+  countryChange(value:any){
+    console.log("Contrchange",value)
+  }
+  gender(value2:any){
+    console.log("gender value",value2)
+
+  }
+  selectManuel(value:any){
+    console.log(value)
+
+  }
 
 }
 
