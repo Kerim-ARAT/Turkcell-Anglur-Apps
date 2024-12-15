@@ -16,7 +16,7 @@ export class TemplateDrivenComponent {
   countryMenu:countryDropMenu[]=[{text:"seciniz",value:0},{text:"Turkiye",value:1},{text:"Almanya",value:2},{text:"Fransa",value:3}]
   /* loginmodel2:loginModeC; */
   constructor(){
-    this.loginMode= {userName:"",passworld:"",rememberME:false,country:0}
+    this.loginMode= {userName:"",passworld:"",rememberME:false,country:0,gender:1}
     /* class ilee örnek */
     /* this.loginmodel2=new  lo[ginModeC(); */
   }
@@ -38,6 +38,7 @@ interface loginModel{
   passworld:string
   rememberME:boolean
   country:number
+  gender:number
 
 }
 /* class ilee örnek */
