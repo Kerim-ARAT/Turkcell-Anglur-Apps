@@ -1,10 +1,10 @@
 <form #saveForm="ngForm" class="container" (ngSubmit)="save(saveForm)">
 
 <label for="userName">Username:</label>
-<input #userNameInput="ngModel" type="text" name="userName2" [(ngModel)]="loginMode.userName" >
+<input #userNameInput="ngModel" type="text" name="userName2" [(ngModel)]="loginMode.userName" pattern="">
 <div class="border border-success rounded-1 p-1">
     <ul class="list-group">
-        <li class="list-group-item list-group-item-primary"> Valid: {{userNameInput.invalid}}</li>
+        <li class="list-group-item list-group-item-primary"> Valid: {{userNameInput.valid}}</li>
         <li class="list-group-item list-group-item-success">invalid: {{userNameInput.invalid}}</li>
         <li class="list-group-item list-group-item-secondary">errors:{{userNameInput.errors | json}}</li>
         <li class="list-group-item list-group-item-info">dirty:{{userNameInput.dirty}}</li>
@@ -17,15 +17,13 @@
 
 
 
-
-
 <br>
 <label for="password">password: </label>
 <input #passworld="ngModel" type="password" name="password2"  [(ngModel)]="loginMode.passworld">
 <br>
 <div class="p-1 border border-success rounded-1 ">
     <ul class="list-group">
-        <li class="list-group-item list-group-item-primary"> Valid: {{passworld.invalid}}</li>
+        <li class="list-group-item list-group-item-primary"> Valid: {{passworld.valid}}</li>
         <li class="list-group-item list-group-item-success">invalid: {{passworld.invalid}}</li>
         <li class="list-group-item list-group-item-secondary">errors:{{passworld.errors | json}}</li>
         <li class="list-group-item list-group-item-info">dirty:{{passworld.dirty}}</li>
@@ -65,6 +63,6 @@
     <option value="3">select 3</option>
 </select> -->
 
-</form>
+
 
 
