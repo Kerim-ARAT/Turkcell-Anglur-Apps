@@ -1,6 +1,7 @@
 import { Component, ElementRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TemplateDrivenComponent } from "./Forms/template-driven/template-driven.component";
+import { NgClass } from '@angular/common';
 
 
 

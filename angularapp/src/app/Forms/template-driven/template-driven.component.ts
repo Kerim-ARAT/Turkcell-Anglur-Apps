@@ -1,12 +1,12 @@
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule, NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { FormControl, FormsModule, NgForm, NgModel } from '@angular/forms';
 import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-template-driven',
   standalone: true,
-  imports: [FormsModule,NgFor,CommonModule],
+  imports: [FormsModule,NgFor,CommonModule,NgClass,NgIf],
   templateUrl: './template-driven.component.html',
   styleUrl: './template-driven.component.css'
 })
@@ -21,6 +21,8 @@ export class TemplateDrivenComponent {
     /* class ilee örnek */
     /* this.loginmodel2=new  lo[ginModeC(); */
   }
+  
+
   save(form:NgForm){
     console.log(form.value);
     /* console.log(this.loginMode)  */                             

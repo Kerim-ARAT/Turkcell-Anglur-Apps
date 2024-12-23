@@ -1,7 +1,17 @@
 <form #saveForm="ngForm" class="container" (ngSubmit)="save(saveForm)">
 
 <label for="userName">Username:</label>
-<input #userNameInput="ngModel" type="text" name="userName2" [(ngModel)]="loginMode.userName" pattern="">
+<input #userNameInput="ngModel" type="text" name="userName2" [(ngModel)]="loginMode.userName" pattern="" required>
+
+
+<div *ngIf="userNameInput.invalid && (userNameInput.dirty||userNameInput.touched)">
+    <small class="text-danger" *ngIf="userNameInput.errors?.['required']">Kullanici adi alani zorunludur</small>
+
+</div>
+<div *ngIf="!userNameInput.invalid && (userNameInput.dirty||userNameInput.touched)">
+    <small class="text-info" *ngIf="!userNameInput.errors?.['required']">Kullanici adi alani basariyla dolduruldu</small>
+</div>
+
 <div class="border border-success rounded-1 p-1">
     <ul class="list-group">
         <li class="list-group-item list-group-item-primary"> Valid: {{userNameInput.valid}}</li>
@@ -19,7 +29,19 @@
 
 <br>
 <label for="password">password: </label>
-<input #passworld="ngModel" type="password" name="password2"  [(ngModel)]="loginMode.passworld">
+<input #passworld="ngModel" type="password" name="password2"  [(ngModel)]="loginMode.passworld" required minlength="4">
+
+<div *ngIf="passworld.invalid && (passworld.dirty||passworld.touched)">
+    <small class="text-danger" *ngIf="passworld.errors?.['required']">sifre alani zorunludur</small>
+    <small class="text-danger" *ngIf="passworld.errors?.['minlength']">passworld en az 4 karakterli olmali</small>
+
+</div>
+<div *ngIf="!passworld.invalid && (passworld.dirty||passworld.touched)">
+    <small class="text-info" *ngIf="!passworld.errors?.['required']">sifreadi alani basariyla dolduruldu</small>
+</div>
+
+
+
 <br>
 <div class="p-1 border border-success rounded-1 ">
     <ul class="list-group">
@@ -33,9 +55,6 @@
         <li class="list-group-item list-group-item-warning">value?: {{passworld.value}}</li>
     </ul>
 </div>
-
-
-
 
 
 
