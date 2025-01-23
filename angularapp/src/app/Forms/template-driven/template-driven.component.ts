@@ -6,7 +6,7 @@ import { fromEvent } from 'rxjs';
 @Component({
   selector: 'app-template-driven',
   standalone: true,
-  imports: [FormsModule,NgFor,CommonModule,NgClass,NgIf],
+  imports: [FormsModule,NgFor,CommonModule,NgIf],
   templateUrl: './template-driven.component.html',
   styleUrl: './template-driven.component.css'
 })
