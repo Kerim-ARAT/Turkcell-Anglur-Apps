@@ -22,7 +22,11 @@
                     <option *ngFor="let item of countryMenu" value="{{item.value}}">{{item.text}}</option>
                 </select>
             </div>
-            
+            <div class="container m-1">
+                <div class="form-check" *ngFor="let item of genderMenu">
+                    <input class="form-check-input" type="radio" [value]="item.value" formControlName="gender">{{item.text}}
+                </div>
+            </div>
             <div class="d-grid gap-2 mb-1">
                 <button type="submit" class="btn btn-success mt-1">Griş</button>
             </div>
