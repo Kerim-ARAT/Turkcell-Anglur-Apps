@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CountrDropMenu } from '../../models/countr-drop-menu';
-import { NgFor } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import {GenderRadioMenu} from '../../models/gender-radio-menu'
 
 @Component({
   selector: 'app-reactive',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule,NgFor],
+  imports: [ReactiveFormsModule, FormsModule,NgFor,CommonModule],
   templateUrl: './reactive.component.html',
   styleUrl: './reactive.component.css'
 })
@@ -24,6 +24,8 @@ export class ReactiveComponent {
       gender:[1]
     })
   }
+  
+  
   gris(){
     console.log(this.loginForm.value)
     

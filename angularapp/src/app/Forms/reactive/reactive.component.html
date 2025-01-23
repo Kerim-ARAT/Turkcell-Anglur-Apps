@@ -6,6 +6,21 @@
                 <br>
                 <input class="form-control" type="text"  formControlName="userName">
             </div>
+            <div class="p-1 border border-success rounded-1 ">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary">     Valid: {{loginForm.get("userName")?.valid}}</li>
+                    <li class="list-group-item list-group-item-success">    invalid: {{loginForm.get("userName")?.invalid}}</li>
+                    <li class="list-group-item list-group-item-secondary">  errors:{{loginForm.get("userName")?.errors | json}}</li>
+                    <li class="list-group-item list-group-item-info">   dirty:{{loginForm.get("userName")?.dirty}}</li>
+                    <li class="list-group-item list-group-item-light">  pristine:{{loginForm.get("userName")?.pristine}}</li>
+                    <li class="list-group-item list-group-item-danger"> touched:{{loginForm.get("userName")?.touched}}</li>
+                    <li class="list-group-item list-group-item-success">    untouched:{{loginForm.get("userName")?.untouched}}</li>
+                    <li class="list-group-item list-group-item-warning" >value?: {{loginForm.get("userName")?.value}}</li>
+                </ul>
+            </div> 
+
+
+
             <div class="mb-3">
                 <label class="form-label" for="password">password: </label>
                 <br>
@@ -34,3 +49,4 @@
     </div>
 </div>    
 
+ 
