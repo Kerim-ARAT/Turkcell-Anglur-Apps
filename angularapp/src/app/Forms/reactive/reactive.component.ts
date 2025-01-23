@@ -13,7 +13,8 @@ export class ReactiveComponent {
   constructor(fb: FormBuilder) {
     this.loginForm = fb.group({
       userName: '', /* FormControl() nesnesi */
-      passWord: ''
+      passWord: '',
+      rememberMe:false
     })
   }
   gris(){
