@@ -16,8 +16,15 @@
                 <label class="form-check-label"> rememberme</label>
                 <br>
             </div>
+            <div data-bs-theme="dark">
+                <label for="country2">Ülke: </label>
+                <select class="m-md-1 dropdown form-select-dark" name="country2" formControlName="countr" >
+                    <option *ngFor="let item of countryMenu" value="{{item.value}}">{{item.text}}</option>
+                </select>
+            </div>
+            
             <div class="d-grid gap-2 mb-1">
-                <button type="submit" class="btn btn-success">Griş</button>
+                <button type="submit" class="btn btn-success mt-1">Griş</button>
             </div>
         </form>
     </div>
